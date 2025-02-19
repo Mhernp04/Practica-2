@@ -1,28 +1,35 @@
-int main () {
-	int num = 0;
-	printf ("Esbribe la nota numerica ");
-	scanf("%d", &num);
-	if (num == 5)|| (num == 6) {
-		printf ("Aprobado ");
-		}
+#include <stdio.h>
+int calculaNota ( int nota);
+int main (){
+	int nota;
+	printf ("Introduce una nota ");
+	scanf ("%d", &nota);
+	switch (nota){
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		printf ("Suspenso ");
+			break;
+		case 5:
+			
+		case 6:
+			printf ("Aprobado ");
+			break;
+		case 7:
+		case 8:
+			printf ("notable ");
+			break;
+		case 9:
+			printf ("sobresaliente ");
+			break;
+		case 10:
+			printf ("Eres perfecto e inigualable, deberian hacer una estatua en tu honor ");
+			break;
+		default: 
+			printf ("La nota tiene que estar entre 0 y 10");
+	}
 	
-	else {
-	 if (num == 7)|| (num == 8)
-	 printf ("Notale ");}
-	 
-	 else {
-	 if (num == 9)|| (num == 10)
-	 printf ("sobresaliente ");}
-	 
-	 else {
-	 if (num >= 0)|| (num < 5)
-	 printf ("Notale ");}
-	 
-	 else {
-	 printf ("Error, tiene que estar entre 0 y 10 ");}
-	
-	
-	printf ("Fin del algoritmo ");
-	
-	
+	return nota;
 }
